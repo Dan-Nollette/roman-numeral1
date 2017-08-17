@@ -9,10 +9,21 @@ function converter(number){
   }
   if(number % 1000 >= 900){
     numeralString = numeralString + "CM";
-  }
-  if(number % 1000 >= 400 && number % 1000 < 500){
+  }else if(number % 1000 >= 400 && number % 1000 < 500){
     numeralString = numeralString + "CD";
+  }else{
+    if(number % 1000 >= 500){
+    numeralString = numeralString + "D";
+    }
+    for(var i = 1; number % 500 >= i * 100; i++){
+      numeralString = numeralString + "C";
+    }
   }
+  // else if(number % 1000 >= 500){
+  //   numeralString = numeralString + "D";
+  // }
+
+
 
   return numeralString;
 };
