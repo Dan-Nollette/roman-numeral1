@@ -33,9 +33,18 @@ function converter(number){
     }
   }
 
-  
-
-
+  if(number % 10 >= 9){
+    numeralString = numeralString + "IX";
+  }else if(number % 10 >= 4 && number % 10 < 5){
+    numeralString = numeralString + "IV";
+  }else{
+    if(number % 10 >= 5){
+    numeralString = numeralString + "V";
+    }
+    for(var i = 1; number % 5 >= i * 1; i++){
+      numeralString = numeralString + "I";
+    }
+  }
 
   return numeralString;
 };
