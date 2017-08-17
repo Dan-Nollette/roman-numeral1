@@ -3,6 +3,11 @@ function converter(number){
   if (number !== number || 0 !== number % 1 || number >= 4000) {
     return "That's not a valid input. Please enter a whole number, less than 4,000."
   };
+  var numeralString = "";
+  for(var i = 1; number >= i * 1000; i++) {
+    numeralString = numeralString + "M";
+  }
+  return numeralString;
 };
 
 
