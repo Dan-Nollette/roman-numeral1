@@ -19,9 +19,21 @@ function converter(number){
       numeralString = numeralString + "C";
     }
   }
-  // else if(number % 1000 >= 500){
-  //   numeralString = numeralString + "D";
-  // }
+
+  if(number % 100 >= 90){
+    numeralString = numeralString + "XC";
+  }else if(number % 100 >= 40 && number % 100 < 50){
+    numeralString = numeralString + "XL";
+  }else{
+    if(number % 100 >= 50){
+    numeralString = numeralString + "L";
+    }
+    for(var i = 1; number % 50 >= i * 10; i++){
+      numeralString = numeralString + "X";
+    }
+  }
+
+  
 
 
 
