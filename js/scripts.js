@@ -1,6 +1,6 @@
 //Business Logic(Back-End)
 function converter(number){
-  if (number !== number || 0 !== number % 1) {
+  if (number !== number || 0 !== number % 1 || number >= 4000) {
     return "That's not a valid input. Please enter a whole number, less than 4,000."
   };
 };
