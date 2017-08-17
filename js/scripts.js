@@ -49,25 +49,11 @@ function converter(number){
   return numeralString;
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 //User Interface (UI or Front-End)
 
 $(document).ready(function(){
   $("#roman-numeral-form").submit(function(event){
     var number = parseFloat($("input#num-input").val());
-    alert(number);
     var output = converter(number);
     $("#output").text(output);
     event.preventDefault();
