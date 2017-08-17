@@ -7,6 +7,9 @@ function converter(number){
   for(var i = 1; number >= i * 1000; i++) {
     numeralString = numeralString + "M";
   }
+  if(number % 1000 >= 900){
+    numeralString = numeralString + "CM";
+  }
   return numeralString;
 };
 
