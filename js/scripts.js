@@ -10,6 +10,10 @@ function converter(number){
   if(number % 1000 >= 900){
     numeralString = numeralString + "CM";
   }
+  if(number % 1000 >= 400 && number % 1000 < 500){
+    numeralString = numeralString + "CD";
+  }
+
   return numeralString;
 };
 
